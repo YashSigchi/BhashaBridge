@@ -1,4 +1,4 @@
-import 'package:myapp/themes/light_mode.dart';
+import 'package:BhashaBridge/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'dark_mode.dart';
 

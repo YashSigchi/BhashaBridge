@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'package:myapp/services/auth/auth_gate.dart';
-import 'package:myapp/themes/theme_provider.dart';
+import 'package:BhashaBridge/services/auth/auth_gate.dart';
+import 'package:BhashaBridge/themes/theme_provider.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -19,13 +19,13 @@ Future<void> main() async {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
-      child: const MyApp(),
+      child: const BhashaBridge(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BhashaBridge extends StatelessWidget {
+  const BhashaBridge({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:myapp/models/messsage.dart';
-import 'package:myapp/services/translation/translation_services.dart';
+import 'package:BhashaBridge/models/messsage.dart';
+import 'package:BhashaBridge/services/translation/translation_services.dart';
 
 class ChatService {
   //get instance of firestore & auth

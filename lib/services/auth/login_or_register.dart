@@ -1,6 +1,7 @@
+// login_or_register.dart
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/login_page.dart';
-import 'package:myapp/pages/register_page.dart';
+import 'package:BhashaBridge/pages/login_page.dart';
+import 'package:BhashaBridge/pages/register_page.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});
@@ -9,27 +10,50 @@ class LoginOrRegister extends StatefulWidget {
   State<LoginOrRegister> createState() => _LoginOrRegisterState();
 }
 
-class _LoginOrRegisterState extends State<LoginOrRegister> {
-  
-  //initially, show login page
+class _LoginOrRegisterState extends State<LoginOrRegister>
+    with SingleTickerProviderStateMixin {
   bool showLoginPage = true;
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
 
-  //toggle btw login and register page
-  void togglePages(){
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 300),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(
+      parent: _animationController,
+      curve: Curves.easeInOut,
+    ));
+    _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  void togglePages() {
     setState(() {
+      _animationController.reset();
       showLoginPage = !showLoginPage;
+      _animationController.forward();
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    if(showLoginPage){
-      return LoginPage(
-        onTap: togglePages,
-      );
-    } else{
-      return RegisterPage(
-        onTap: togglePages,
-      );
-    }
+    return FadeTransition(
+      opacity: _fadeAnimation,
+      child: showLoginPage
+          ? LoginPage(onTap: togglePages)
+          : RegisterPage(onTap: togglePages),
+    );
   }
 }

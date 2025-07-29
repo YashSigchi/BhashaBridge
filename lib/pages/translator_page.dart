@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:myapp/components/my_drawer.dart';
-import 'package:myapp/themes/theme_provider.dart';
+import 'package:BhashaBridge/components/my_drawer.dart';
+import 'package:BhashaBridge/themes/theme_provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() {
@@ -511,7 +511,7 @@ class _TranslatorChatScreenState extends State<TranslatorChatScreen>
           ),
         ],
       ),
-      drawer: const MyDrawer(),
+      drawer: MyDrawer(currentRoute: '/translator'),
       body: SafeArea(
         child: Column(
           children: [

@@ -274,20 +274,20 @@ class _AboutPageState extends State<AboutPage> {
                     onTap: _showBugReportDialog,
                   ),
 
-                  // Legal & Privacy
-                  _buildSectionHeader('Legal & Privacy'),
-                  _buildInfoTile(
-                    icon: Icons.description,
-                    title: 'Terms of Service',
-                    subtitle: 'Read our terms and conditions',
-                    onTap: () => _launchURL('https://myapp.com/terms'),
-                  ),
-                  _buildInfoTile(
-                    icon: Icons.privacy_tip,
-                    title: 'Privacy Policy',
-                    subtitle: 'Learn how we protect your data',
-                    onTap: () => _launchURL('https://myapp.com/privacy'),
-                  ),
+                  // // Legal & Privacy
+                  // _buildSectionHeader('Legal & Privacy'),
+                  // _buildInfoTile(
+                  //   icon: Icons.description,
+                  //   title: 'Terms of Service',
+                  //   subtitle: 'Read our terms and conditions',
+                  //   onTap: () => _launchURL('https://myapp.com/terms'),
+                  // ),
+                  // _buildInfoTile(
+                  //   icon: Icons.privacy_tip,
+                  //   title: 'Privacy Policy',
+                  //   subtitle: 'Learn how we protect your data',
+                  //   onTap: () => _launchURL('https://myapp.com/privacy'),
+                  // ),
 
                   // Credits
                   _buildSectionHeader('Credits'),
@@ -308,27 +308,27 @@ class _AboutPageState extends State<AboutPage> {
                   ),
 
                   // Social Media
-                  _buildSectionHeader('Follow Us'),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      _buildSocialButton(
-                        icon: Icons.facebook,
-                        label: 'Facebook',
-                        onTap: () => _launchURL('https://facebook.com/myapp'),
-                      ),
-                      _buildSocialButton(
-                        icon: Icons.alternate_email,
-                        label: 'Twitter',
-                        onTap: () => _launchURL('https://twitter.com/myapp'),
-                      ),
-                      _buildSocialButton(
-                        icon: Icons.camera_alt,
-                        label: 'Instagram',
-                        onTap: () => _launchURL('https://instagram.com/myapp'),
-                      ),
-                    ],
-                  ),
+                  // _buildSectionHeader('Follow Us'),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //   children: [
+                  //     _buildSocialButton(
+                  //       icon: Icons.facebook,
+                  //       label: 'Facebook',
+                  //       onTap: () => _launchURL('https://facebook.com/myapp'),
+                  //     ),
+                  //     _buildSocialButton(
+                  //       icon: Icons.alternate_email,
+                  //       label: 'Twitter',
+                  //       onTap: () => _launchURL('https://twitter.com/myapp'),
+                  //     ),
+                  //     _buildSocialButton(
+                  //       icon: Icons.camera_alt,
+                  //       label: 'Instagram',
+                  //       onTap: () => _launchURL('https://instagram.com/myapp'),
+                  //     ),
+                  //   ],
+                  // ),
 
                   const SizedBox(height: 32),
 
